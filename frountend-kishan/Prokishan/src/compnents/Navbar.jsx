@@ -1,4 +1,5 @@
 import React from "react";
+import { Link } from "react-router-dom";
 
 const Navbar = () => {
   const styles = {
@@ -9,6 +10,7 @@ const Navbar = () => {
       height: "60px",
       backgroundColor: "green",
       color: "#fff",
+      borderRadius: "8px",
     },
     logo: {
       fontSize: "24px",
@@ -22,35 +24,43 @@ const Navbar = () => {
       outline: "none",
     },
     link: {
-      color: "#fff",
       textDecoration: "none",
       margin: "0 10px",
       fontFamily: "sans-serif",
-      hover: {
-       backgroundColor: "yellow",
-      color: "#fff",
-      padding: "5px 10px",
+      padding: "6px 10px",
       borderRadius: "4px",
-      textDecoration: "none",
-      },
+      transition: "background-color 0.3s ease, color 0.3s ease",
+      color: "white", // default link color
     },
   };
 
   return (
-    <nav style={styles.nav_container}>
-      <div style={styles.logo}>MyLogo</div>
+    <>
+      <style>
+        {`
+          .naviteam:hover {
+            background-color: yellow;
+            color: black !important;
+          }
+        `}
+      </style>
 
-      <div>
-        <input type="text" placeholder="Search..." style={styles.input} />
-      </div>
+      <nav style={styles.nav_container}>
+        <div style={styles.logo}>MyLogo</div>
 
-      <div>
-        <a href="#" style={styles.link}>Home</a>
-        <a href="#" style={styles.link}>About</a>
-        <a href="#" style={styles.link}>Contact</a>
-        <a href="#" style={styles.link}>Login</a>
-      </div>
-    </nav>
+        <div>
+          <input type="text" placeholder="Search..." style={styles.input} />
+        </div>
+
+        <div>
+          <Link to="/" style={styles.link} className="naviteam">Home</Link>
+          <Link to="/about" style={styles.link} className="naviteam">About</Link>
+          <Link to="/contact" style={styles.link} className="naviteam">Contact Us</Link>
+          <Link to="/login" style={styles.link} className="naviteam">Login</Link>
+          <Link to="/schemes" style={styles.link} className="naviteam">Schemes</Link>
+        </div>
+      </nav>
+    </>
   );
 };
 
