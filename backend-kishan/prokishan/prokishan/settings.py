@@ -20,7 +20,7 @@ BASE_DIR = Path(__file__).resolve().parent.parent
 # See https://docs.djangoproject.com/en/5.2/howto/deployment/checklist/
 
 # SECURITY WARNING: keep the secret key used in production secret!
-SECRET_KEY = 'django-insecure-vqyg&dtb$36_3&dsg5v&ulq5yh+yr5221=&-oq8cbaysug&b43'
+SECRET_KEY = 'django-insecure-4278@hx&tz8btn50y8d^xk*0vw-)@x0z-@cd=9@lw_00@uv25u'
 
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
@@ -37,9 +37,27 @@ INSTALLED_APPS = [
     'django.contrib.sessions',
     'django.contrib.messages',
     'django.contrib.staticfiles',
+    'accounts',
+    'api',
+    'rest_framework',
+    'corsheaders',
+    'crops',
+    'schemes',
+    
 ]
+CORS_ALLOWED_ORIGINS = [
+    "http://localhost:5173",
+    "https://your-production-domain.com",
+]
+CORS_ALLOW_ALL_ORIGINS = True  # Allow cookies to be included in CORS requests
+AUTH_USER_MODEL = 'accounts.CustomUser'
+
+  # Custom user model
+ROOT_URLCONF = 'prokishan.urls'
+
 
 MIDDLEWARE = [
+    "corsheaders.middleware.CorsMiddleware",  # ✅ MUST be at the top
     'django.middleware.security.SecurityMiddleware',
     'django.contrib.sessions.middleware.SessionMiddleware',
     'django.middleware.common.CommonMiddleware',
