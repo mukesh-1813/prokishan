@@ -1,0 +1,80 @@
+.Contact{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    background: #9dedb1;
+}
+
+form{
+    max-width: 600px;
+    width: 100%;
+    background-color: #fff;
+    padding: 25px 25px 30px;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, .1);
+    color: #333;
+    margin: 25px;
+}
+form h2{
+    font-size: 30px;
+    text-align: center;
+    font-family: sans-serif;
+}
+form .input-box{
+    margin-top: 20px;
+}
+.input-box .feild{
+    width: 565px;
+    height: 15px;
+    background: transparent;
+    border: 2px solid #ddd;
+    outline: none;
+    border-radius: 6px;
+    padding: 15px;
+    font-size: 16px;
+    color: #333;
+    margin-top: 8px;
+    font-family: sans-serif;
+}
+.input-box .feildmsg {
+    height: 200px;
+    resize: none;
+    width: 97%;
+    margin-top: 10px;
+    border: 2px solid #ddd;
+    outline: none;
+    border-radius: 6px;
+    padding-top: 10px;
+    padding-left: 10px;
+}
+
+.input-box .feildmsg::placeholder {
+  font-family: 'Poppins', sans-serif;
+  font-size: 16px;
+  
+  color: #aaa;
+}
+
+form button{
+    width: 100%;
+    height: 55px;
+    background: #008000;
+    border: none;
+    border-radius: 6px;
+    box-shadow: 0 0 10px , rgba(0, 0, 0, .1);
+    cursor: pointer;
+    font-size: 16px;
+    counter-reset: #fff;
+    font-weight: 500;
+    margin-top: 25px;
+}
+
+form button:hover {
+    background: #ffff00;
+}
+
+.input-box label {
+    font-family: sans-serif;
+    margin-left: 15px;
+}
