@@ -53,11 +53,11 @@ const Navbar = () => {
         </div>
 
         <div>
-          <Link to="/" style={styles.link} className="naviteam">Home</Link>
-          <Link to="/about" style={styles.link} className="naviteam">About</Link>
-          <Link to="/contact" style={styles.link} className="naviteam">Contact Us</Link>
-          <Link to="/login" style={styles.link} className="naviteam">Login</Link>
-          <Link to="/schemes" style={styles.link} className="naviteam">Schemes</Link>
+          <Link to="/" style={styles.link} className="naviteam"><span className="material-icons" style={{ verticalAlign: 'middle', marginRight: '5px', marginBottom: '4.5px' }}>home</span>Home</Link>
+          <Link to="/about" style={styles.link} className="naviteam"><span className="material-icons" style={{ verticalAlign: 'middle', marginRight: '5px' }}>info</span>About</Link>
+          <Link to="/contact" style={styles.link} className="naviteam"><span className="material-icons" style={{ verticalAlign: 'middle', marginRight: '5px' }}>contacts</span>Contact Us</Link>
+          <Link to="/login" style={styles.link} className="naviteam"><span className="material-icons" style={{ verticalAlign: 'middle', marginRight: '5px' }}>login</span>Login</Link>
+          <Link to="/schemes" style={styles.link} className="naviteam"><span className="material-icons" style={{ verticalAlign: 'middle', marginRight: '5px' }}>account_balance</span>Schemes</Link>
         </div>
       </nav>
     </>
